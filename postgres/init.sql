@@ -1,0 +1,42 @@
+CREATE TABLE IF NOT EXISTS employees_clean (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    full_name VARCHAR(200),
+    email VARCHAR(200),
+    email_domain VARCHAR(200),
+    hire_date DATE,
+    job_title VARCHAR(200),
+    department VARCHAR(100),
+    salary DOUBLE PRECISION,
+    salary_band VARCHAR(50),
+    manager_id INT,
+    address TEXT,
+    city VARCHAR(100),
+    state VARCHAR(50),
+    zip_code VARCHAR(20),
+    birth_date DATE,
+    age INT,
+    tenure_years DOUBLE PRECISION,
+    status VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS employees_rejected (
+    employee_id INT,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(150),
+    hire_date DATE,
+    job_title VARCHAR(200),
+    department VARCHAR(100),
+    salary NUMERIC,
+    manager_id INT,
+    address TEXT,
+    city VARCHAR(100),
+    state VARCHAR(50),
+    zip_code VARCHAR(20),
+    birth_date DATE,
+    status VARCHAR(50),
+    rejection_reason TEXT,
+    rejected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
